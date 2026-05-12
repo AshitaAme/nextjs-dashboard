@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import { inter, lusitana, geist } from '@/app/ui/fonts';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -10,4 +12,3 @@ export default function RootLayout({
     </html>
   );
 }
-
