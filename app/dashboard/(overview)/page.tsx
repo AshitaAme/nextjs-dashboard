@@ -1,10 +1,10 @@
 import { Suspense } from "react";
-import CardWrapper, { Card } from "../../ui/dashboard/cards";
 import LatestInvoices from "../../ui/dashboard/latest-invoices";
 import RevenueChart from "../../ui/dashboard/revenue-chart";
 import { lusitana } from "../../ui/fonts";
 import { CardSkeleton, RevenueChartSkeleton } from "@/app/ui/skeletons";
-import { fetchLatestInvoices, fetchCardData } from "@/app/lib/data";
+import { fetchLatestInvoices } from "@/app/lib/data";
+import CardWrapper from "@/app/ui/dashboard/cards";
 
 export default async function Page() {
   const latestInvoices = await fetchLatestInvoices();
