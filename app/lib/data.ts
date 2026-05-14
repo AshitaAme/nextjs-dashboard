@@ -154,6 +154,10 @@ export async function fetchInvoiceById(id: string) {
       WHERE invoices.id = ${id};
     `;
 
+    if (data.length === 0) {
+      return null;
+    }
+
     const invoice = data.map((invoice) => ({
       ...invoice,
       // Convert amount from cents to dollars
